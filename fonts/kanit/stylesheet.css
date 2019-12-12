@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Kanit';
+    src: url('hinted-Kanit-Bold.eot');
+    src: url('hinted-Kanit-Bold.eot?#iefix') format('embedded-opentype'),
+        url('hinted-Kanit-Bold.woff2') format('woff2'),
+        url('hinted-Kanit-Bold.woff') format('woff'),
+        url('hinted-Kanit-Bold.ttf') format('truetype'),
+        url('hinted-Kanit-Bold.svg#Kanit-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kanit';
+    src: url('hinted-Kanit-Light.eot');
+    src: url('hinted-Kanit-Light.eot?#iefix') format('embedded-opentype'),
+        url('hinted-Kanit-Light.woff2') format('woff2'),
+        url('hinted-Kanit-Light.woff') format('woff'),
+        url('hinted-Kanit-Light.ttf') format('truetype'),
+        url('hinted-Kanit-Light.svg#Kanit-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+

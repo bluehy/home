@@ -27,23 +27,35 @@ $(window).on('scroll',function(){
    }
 
 
-   // 스크롤 했을 때, 일정 위치에서 title 텍스트 변화.
-   let title = 'none';
+   // 스크롤 했을 때, 규칙에 따라 title 텍스트 변화.
+   let rel = false;
    if(scrollTop >= 100){
-      title = 'change';
+      rel = true;
+   }
+   
+   let title = 'none';
+   let scr = parseInt(scrollTop / 100) % 2 == 0;
+   if(scr){
+      title = 1;
+   }else{
+      title = 0;
    }
 
-   switch (title){
-      case 'change':
-         head.children('title').text('SCROLLING. . .');
-      break;
-      case 'none':
-         head.children('title').text('HOME_____');
-      break;
+   if(rel){
+      switch (title){
+         case 1:
+            head.children('title').text('SCROLLING. . . .');
+         break;
+         case 0:
+            head.children('title').text('SCROLLING . . .');
+         break;
+      }
+   }else{
+      head.children('title').text('HOME_____');
    }
 });
 
-// 최상단 버튼에 마우스를 올렸을 때, hover효과
+// 최상단으로 가기 버튼에 마우스를 올렸을 때, hover효과
 
 footBox.find('.move_top').on('mouseenter focus',function(){
    $(this).children('button').addClass('action');
@@ -52,6 +64,13 @@ footBox.find('.move_top').on('mouseenter focus',function(){
 footBox.find('.move_top').on('mouseleave blur',function(){
    $(this).children('button').removeClass('action');
 })
+
+
+// 최상단으로 가기 버튼을 클릭했을 때, 이동효과
+footBox.find('.move_top').on('click',function(){
+   $('html, body').stop().animate({ scrollTop: 0 + 'px' },700);
+})
+
 
 
 // html, js load Part

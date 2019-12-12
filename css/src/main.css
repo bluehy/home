@@ -1,30 +1,44 @@
 /* import scss part */
 /* main.css */
-#headBox { position: fixed; top: 0; left: 0; width: 100%; height: 80px; box-sizing: border-box; }
+#headBox { position: fixed; z-index: 1000; top: 0; left: 0; width: 100%; height: 80px; box-sizing: border-box; }
 
 #headBox .head_wrap { width: 90%; min-width: 960px; max-width: 1280px; height: 100%; margin: auto; }
 
 #headBox .head_wrap h1 { float: left; width: 20%; height: 100%; }
 
-#headBox .head_wrap #gnb { float: right; width: 60%; height: 100%; background-color: #aaa; }
+#headBox .head_wrap h1 a { display: block; width: 100%; height: 100%; background-image: url("../../img/favicon.png"); background-position: 50% 50%; background-repeat: no-repeat; }
+
+#headBox .head_wrap h1 span { display: block; width: 0; height: 0; overflow: hidden; }
+
+#headBox .head_wrap #gnb { float: right; width: 60%; height: 100%; }
 
 #headBox .head_wrap #gnb .gnb_wrap { width: 100%; height: 100%; }
 
-#headBox .head_wrap #gnb .gnb_wrap li { float: left; width: 30%; margin-right: 5%; text-align: center; }
+#headBox .head_wrap #gnb .gnb_wrap li { float: left; width: 30%; height: auto; margin-right: 5%; text-align: center; font-weight: bold; font-size: 1.2rem; text-transform: capitalize; line-height: 80px; }
 
 #headBox .head_wrap #gnb .gnb_wrap li:last-of-type { margin-right: 0; }
 
-#headBox .head_wrap .head_menu { float: right; width: 50px; height: 50px; background-color: #0af; display: none; margin-right: 5rem; }
+#headBox .head_wrap #gnb .gnb_wrap li a { display: block; width: 100%; height: 100%; position: relative; }
+
+#headBox .head_wrap #gnb .gnb_wrap li a:after, #headBox .head_wrap #gnb .gnb_wrap li a::after { content: " "; display: block; width: 0; height: 20%; border-right: 1px solid #333; position: absolute; top: 50%; right: 0; transform: translateY(-50%); }
+
+#headBox .head_wrap #gnb .gnb_wrap li:last-of-type a:after, #headBox .head_wrap #gnb .gnb_wrap li:last-of-type a::after { display: none; }
+
+#headBox .head_wrap .head_menu { float: right; width: 50px; height: 50px; background-color: #9be3de; display: none; margin-right: 5rem; }
 
 #headBox .head_wrap .head_menu button { width: 100%; height: 100%; background-color: transparent; }
 
-#headBox .head_wrap .head_menu button i { width: 100%; height: 100%; line-height: 50px; font-size: 16px; }
+#headBox .head_wrap .head_menu button i { width: 100%; height: 100%; line-height: 50px; font-size: 16px; color: #464159; }
 
-#viewBox { width: 100%; height: 100%; min-height: 56.25rem; padding: 5rem 2rem; box-sizing: border-box; background-color: rgba(0, 0, 0, 0.5); }
+#viewBox { position: relative; width: 100%; height: 100%; min-height: 56.25rem; padding: 5rem 2rem; box-sizing: border-box; background-color: rgba(0, 0, 0, 0.5); background-repeat: no-repeat; background-position: 50% 0; overflow: hidden; }
 
 #viewBox h2 { display: block; width: 0; height: 0; overflow: hidden; }
 
-#conBox { width: 100%; height: auto; min-height: 56.25rem; padding: 5rem 2rem; box-sizing: border-box; background-color: rgba(46, 39, 157, 0.5); overflow: hidden; }
+#viewBox div { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-repeat: no-repeat; background-position: 50% 100%; }
+
+#viewBox div:last-of-type:after, #viewBox div:last-of-type::after { position: absolute; z-index: -1; top: 100%; content: " "; display: block; width: 100%; height: 200%; background-color: #333; }
+
+#conBox { width: 100%; height: auto; min-height: 100%; padding: 5rem 2rem; box-sizing: border-box; background-color: rgba(46, 39, 157, 0.5); overflow: hidden; }
 
 #conBox h2 { display: block; width: 0; height: 0; overflow: hidden; }
 
@@ -36,7 +50,7 @@
 
 #footBox p span { display: block; width: 0; height: 0; overflow: hidden; }
 
-#footBox .move_top { position: fixed; bottom: 10%; right: 10%; transform: translate(50%, 50%); width: 60px; height: 60px; color: #fff; display: none; }
+#footBox .move_top { position: fixed; z-index: 800; bottom: 10%; right: 10%; transform: translate(50%, 50%); width: 60px; height: 60px; color: #fff; display: none; }
 
 #footBox .move_top button { width: 100%; height: 100%; background-color: transparent; box-sizing: border-box; border: 1px solid #fff; transition: all 500ms ease; }
 
