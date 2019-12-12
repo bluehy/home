@@ -24,7 +24,7 @@
 
 #viewBox h2 { display: block; width: 0; height: 0; overflow: hidden; }
 
-#conBox { width: 100%; height: auto; min-height: 56.25rem; padding: 5rem 2rem; box-sizing: border-box; background-color: rgba(255, 151, 0, 0.5); overflow: hidden; }
+#conBox { width: 100%; height: auto; min-height: 56.25rem; padding: 5rem 2rem; box-sizing: border-box; background-color: rgba(46, 39, 157, 0.5); overflow: hidden; }
 
 #conBox h2 { display: block; width: 0; height: 0; overflow: hidden; }
 

@@ -26,7 +26,7 @@ $(window).on('scroll',function(){
       footBox.find('.move_top').stop().fadeOut();
    }
 
-   
+
    // 스크롤 했을 때, 일정 위치에서 title 텍스트 변화.
    let title = 'none';
    if(scrollTop >= 100){
@@ -39,6 +39,7 @@ $(window).on('scroll',function(){
       break;
       case 'none':
          head.children('title').text('HOME_____');
+      break;
    }
 });
 
