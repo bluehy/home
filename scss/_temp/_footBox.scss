@@ -1,0 +1,21 @@
+#footBox {width: 100%; height: auto; padding: 2rem; box-sizing:border-box; background-color: #333; color: #fff; text-align:center;
+   h2 {width: 30%; min-width: 12.5rem; height: auto; margin:auto; margin-bottom: 1.3rem; text-transform:uppercase;}
+   address {width: 30%; min-width: 12.5rem; height: auto; min-height: 50px; margin:auto;font-style:normal; font-size: 14px;
+      ul {margin-bottom: 1rem;}
+      p {margin-bottom: 1rem;}
+   }//address
+   sub {line-height: 0.2; word-break:keep-all;}
+   
+   .move_top {position:fixed; z-index: 800; bottom: 10%; right: 10%; transform:translate(50%, 50%); width: 60px; height: 60px; color:#fff; display:none;
+      button {width: 100%; height: 100%; background-color: transparent; box-sizing: border-box; border: 1px solid #fff; transition:all 500ms ease;
+         p {display: block; width: 100%; height: 100%; text-align:center; font-size: 16px; line-height: 60px; text-transform: uppercase;
+            span {@include hidden;}
+         }
+         i {color: #464159; font-size: 32px; display:none;}
+      }//button
+      button.action {transform: rotate(-225deg); border:0; background-color: $main; color: #464159; box-shadow: 0.1rem -0.1rem 0.1rem #333;
+         p {display:none;}
+         i {display:block; transform: rotate(225deg);}
+      }//button.action
+   }//.move_top
+}//#footBox

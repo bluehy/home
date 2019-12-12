@@ -8,30 +8,7 @@
 
 /* main.css */
 
-
-#headBox {position:fixed; z-index:1000; top:0; left:0; width: 100%; height: 80px; box-sizing:border-box;
-   .head_wrap {width: 90%; min-width: 960px; max-width: 1280px; height: 100%; margin:auto;
-      h1 {float:left; width: 20%; height: 100%;
-         a {display: block; width: 100%; height: 100%; background-image: url("../../img/favicon.png"); background-position: 50% 50%; background-repeat: no-repeat;}
-         span {@include hidden}
-      }//h1
-      #gnb {float:right; width: 60%; height: 100%;
-         .gnb_wrap {width: 100%; height: 100%;
-            li {float:left; width: 30%; height: auto; margin-right:5%; text-align:center; font-weight: bold; font-size: 1.2rem; text-transform: capitalize; line-height: 80px;
-            &:last-of-type {margin-right:0;}
-               a {display: block; width: 100%; height: 100%; position:relative;}
-               a:after,a::after {content:" "; display: block; width:0; height: 20%; border-right: 1px solid #333; position:absolute; top:50%; right:-10px; transform:translateY(-50%);}
-            }//li    
-            li:last-of-type a:after,li:last-of-type a::after {display:none;}
-         }//.gnb_wrap
-      }//#gnb
-      .head_menu {float:right; width: 50px; height: 50px; background-color: $main; display:none; margin-right: 5rem;
-         button {width: 100%; height: 100%; background-color: transparent;
-            i {width: 100%; height: 100%; line-height: 50px; font-size:16px; color: $mainF;}
-         }
-      }//.head_menu
-   }//.head_wrap
-}//#headBox
+@import "../_temp/headBox";
 
 
 
@@ -48,24 +25,4 @@
 }
 
 
-#footBox {width: 100%; height: auto; padding: 2rem; box-sizing:border-box; background-color: #333; color: #fff; text-align:center;
-   h2 {width: 30%; min-width: 12.5rem; height: auto; margin:auto; margin-bottom: 1.3rem; text-transform:uppercase;}
-   address {width: 30%; min-width: 12.5rem; height: auto; min-height: 50px; margin:auto;font-style:normal; font-size: 14px;
-      ul {margin-bottom: 1rem;}
-      p {margin-bottom: 1rem;}
-   }//address
-   sub {line-height: 0.2; word-break:keep-all;}
-   
-   .move_top {position:fixed; z-index: 800; bottom: 10%; right: 10%; transform:translate(50%, 50%); width: 60px; height: 60px; color:#fff; display:none;
-      button {width: 100%; height: 100%; background-color: transparent; box-sizing: border-box; border: 1px solid #fff; transition:all 500ms ease;
-         p {display: block; width: 100%; height: 100%; text-align:center; font-size: 16px; line-height: 60px; text-transform: uppercase;
-            span {@include hidden;}
-         }
-         i {color: #464159; font-size: 32px; display:none;}
-      }//button
-      button.action {transform: rotate(-225deg); border:0; background-color: $main; color: #464159; box-shadow: 0.1rem -0.1rem 0.2rem #333;
-         p {display:none;}
-         i {display:block; transform: rotate(225deg);}
-      }//button.action
-   }//.move_top
-}
+@import "../_temp/_footBox";
