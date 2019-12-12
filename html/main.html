@@ -38,19 +38,72 @@
 
    <!-- layout =============== -->
    <div id="wrap">
+      <!-- headBox -->
       <header id="headBox">
-         <h1><a href="">제목</a></h1>
+         <div class="head_wrap">
+            <h1><a href="">제목</a></h1>
+            <nav id="gnb">
+               <ul class="gnb_wrap">
+                  <li><a href="#">about</a></li>
+                  <li><a href="#">web</a></li>
+                  <li><a href="#">gallery</a></li>
+               </ul>
+            </nav>
+            <div class="head_menu">
+               <button type="button">
+                  <i class="fas fa-plus"></i>
+               </button>
+            </div>
+         </div>
       </header>
+      
+      <!-- viewBox -->
+      <section id="viewBox">
+         <h2>viewBox</h2>
+      </section>
+      
+      <!-- conBox -->
       <main id="conBox">
-         <h2>부제</h2>
+         <h2>conBox</h2>
+         <!-- 이력서 -->
+         <section class="intro con_area">
+            <h3>about me</h3>
+         </section>
+         
+         <!-- 웹페이지 포트폴리오 -->
+         <article class="web con_area">
+            <h3></h3>
+         </article>
+
+         <!-- 기타 작업물 -->
+         <section class="others con_area">
+            <h3></h3>
+         </section>
+
       </main>
+
+      <!-- footBox -->
       <footer id="footBox">
-         <h2>사이트정보</h2>
+         <h2>contact</h2>
+         <address>
+            <ul>
+               <li><a href="#">+82-10-8915-xxxx</a></li>
+               <li><a href="mailto:chessg55@gmail.com">chessg55@gmail.com</a></li>
+               <li><a href="https://github.com/c-hayoung">https://github.com/c-hayoung</a></li>
+            </ul>
+            <p><sub><span>copyright</span>&copy; 써야하나?</sub></p>
+         </address>
+         <div class="move_top">
+            <button type="button">
+               <p>top</p>
+               <i class="fas fa-long-arrow-alt-up"></i>
+            </button>
+         </div>
       </footer>
    </div>
    <!-- script ================ -->
-      <script src="../../js/base/jquery-3.4.1.min.js"></script>
-      <script src="../../js/base/jquery-ui.min.js"></script>
-      <script src="../../js/src/main.js"></script>
+      <script src="../js/base/jquery-3.4.1.min.js"></script>
+      <script src="../js/base/jquery-ui.min.js"></script>
+      <script src="../js/src/main.js"></script>
    </body>
 </html>
