@@ -30,6 +30,7 @@
 
          subMenu.children('button').on('click',function(){
             headBox.find('.head_menu').removeClass('action');
+            headBox.find('.head_menu').find('i').attr({'class':'fas fa-plus'});
             $(this).parent().stop().fadeOut(500,function(){
                $(this).remove();
             });
