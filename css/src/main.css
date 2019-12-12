@@ -20,7 +20,7 @@
 
 #headBox .head_wrap #gnb .gnb_wrap li a { display: block; width: 100%; height: 100%; position: relative; }
 
-#headBox .head_wrap #gnb .gnb_wrap li a:after, #headBox .head_wrap #gnb .gnb_wrap li a::after { content: " "; display: block; width: 0; height: 20%; border-right: 1px solid #333; position: absolute; top: 50%; right: 0; transform: translateY(-50%); }
+#headBox .head_wrap #gnb .gnb_wrap li a:after, #headBox .head_wrap #gnb .gnb_wrap li a::after { content: " "; display: block; width: 0; height: 20%; border-right: 1px solid #333; position: absolute; top: 50%; right: -10px; transform: translateY(-50%); }
 
 #headBox .head_wrap #gnb .gnb_wrap li:last-of-type a:after, #headBox .head_wrap #gnb .gnb_wrap li:last-of-type a::after { display: none; }
 
@@ -34,7 +34,7 @@
 
 #viewBox h2 { display: block; width: 0; height: 0; overflow: hidden; }
 
-#viewBox div { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-repeat: no-repeat; background-position: 50% 100%; }
+#viewBox div { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-repeat: no-repeat; background-position: 50% 100%; background-size: 100% auto; }
 
 #viewBox div:last-of-type:after, #viewBox div:last-of-type::after { position: absolute; z-index: -1; top: 100%; content: " "; display: block; width: 100%; height: 200%; background-color: #333; }
 
@@ -42,13 +42,17 @@
 
 #conBox h2 { display: block; width: 0; height: 0; overflow: hidden; }
 
-#footBox { width: 100%; height: 200px; padding: 2rem; box-sizing: border-box; background-color: #333; color: #fff; text-align: center; }
+#footBox { width: 100%; height: auto; padding: 2rem; box-sizing: border-box; background-color: #333; color: #fff; text-align: center; }
 
-#footBox h2 { width: 30%; height: auto; margin: auto; margin-bottom: 1.3rem; text-transform: uppercase; }
+#footBox h2 { width: 30%; min-width: 12.5rem; height: auto; margin: auto; margin-bottom: 1.3rem; text-transform: uppercase; }
 
-#footBox address { width: 30%; height: auto; min-height: 50px; margin: auto; font-style: normal; font-size: 14px; }
+#footBox address { width: 30%; min-width: 12.5rem; height: auto; min-height: 50px; margin: auto; font-style: normal; font-size: 14px; }
 
-#footBox p span { display: block; width: 0; height: 0; overflow: hidden; }
+#footBox address ul { margin-bottom: 1rem; }
+
+#footBox address p { margin-bottom: 1rem; }
+
+#footBox sub { line-height: 0.2; word-break: keep-all; }
 
 #footBox .move_top { position: fixed; z-index: 800; bottom: 10%; right: 10%; transform: translate(50%, 50%); width: 60px; height: 60px; color: #fff; display: none; }
 

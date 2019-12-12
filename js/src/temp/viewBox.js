@@ -7,7 +7,8 @@
    let par = [];
 
    
-   // function part
+// function part
+// viewBox parallax 기능 적용하기
    for(let i = 0; i < 8 ; i++){
       viewBox.append('<div class="viewImg_0'+ i +'" tabindex="-1"></div>');
       // viewBox.children('div').eq(i).css({'zIndex':i,'backgroundImage':'url("../img/viewBox/viewImg_0'+i+'.png")'});
