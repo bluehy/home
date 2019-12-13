@@ -35,5 +35,19 @@ const footBox = wrap.children('#footBox');
    });
 
 
+// function part
+// conBox
+const webArea = conBox.children('.web');
+const webUl = webArea.children('ul');
+const webLi = webUl.children('li');
+const webDl = webLi.children('dl');
+const webDt = webDl.children('dt');
+const webDd = webDl.children('dd');
+   const webImg = webDd.children('img');
+   const webA = webDd.children('a');
+
+   webDd.on('mouseenter focus',function(){
+      $(this).addClass('action');
+   })
 
 })(jQuery);

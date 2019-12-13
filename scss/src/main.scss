@@ -20,7 +20,7 @@
 
 
 
-#conBox {width: 100%; height: auto; min-height: 100%; padding: 5rem 2rem; box-sizing:border-box; background:linear-gradient(174deg, #dff6f0,#46b3e6,#4d80e4,#2e279d);
+#conBox {width: 100%; height: auto; min-height: 100%; padding: 5rem 2rem; box-sizing:border-box; background:linear-gradient(174deg, #dff6f0,#46b3e6,#4d80e4,#2e279d,#333); overflow:hidden;
    h2 {@include hidden;}
    .con_area {width: 100%; height: auto; min-height: 500px; padding: 3rem; box-sizing:border-box; margin:auto; margin-bottom: 2rem;
       h3 {width: 20%; min-width:9.375rem; margin:auto; margin-bottom: 2rem; text-align:center; font-size:$h4;}
@@ -28,26 +28,23 @@
 
    .web {
       ul {width: 100%; height: auto;
-         li {width: 100%; height: 500px; margin-bottom: 2rem;
-            dl{width: 100%; height: 130%; @include clearfix;
+         li {width: 100%; height: 650px; margin-bottom: 2rem; position:relative;
+            dl{width: 100%; height: 100%; @include clearfix;
                dt{float:right; width: 40%; height:100%; }//dt
-               dd{float:left; width: 60%; height: 100%; position:relative;
-                  img {position:absolute; top:0; right: 0; width: auto; height: 100%; }
-                  a{display: block; width: 100%; height: 100%; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);
-                     i {position:absolute; top: 50%; left:50%; transform: translate(-50%,-50%); width: 30px; height: 30px; color:#fff; background-color:#333; border-radius:100%; text-align:center; line-height: 30px; opacity:0; transition:all 300ms ease;}
-                  &.action:after,&.action::after {content:" "; display: block; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);}
-                  &.action i {opacity:1; background-color: #fff; color: #333;}
-                  }//a
-               }//dd
+               .img_area{float:left; width: 60%; height: 100%; position:relative;
+                  img {position:absolute; top:0; right: 0; width: auto; height: 100%;}
+               }//dd.img_area
+               .text_area {position:absolute; top: 55%; left: 50%; width: 40%; height: 20%; background-color: #fff;}
             }//dl
          }//li
-      li:nth-of-type(2n) {
-         dl {
-            dt {float:left;}
-            dd {float:right;
-               img {left:0;}
-            }//dd
-         }
+         li:nth-of-type(2n) {
+            dl {
+               dt {float:left;}
+               .img_area {float:right;
+                  img {left:0;}
+               }//dd.img_area
+               .text_area {left:auto; right: 50%;}
+         }//
       }
       }//ul
    }//.web
