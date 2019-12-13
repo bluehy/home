@@ -28,6 +28,7 @@ const footBox = wrap.children('#footBox');
    });
 
 
+
    footBox.load(htmlUrl+'footBox.html',function(){
       body.append(tempS+'footBox'+tempE);
       body.append(tempS+'basic_scroll_event'+tempE);

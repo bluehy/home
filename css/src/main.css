@@ -56,9 +56,41 @@
 
 #viewBox div:last-of-type:after, #viewBox div:last-of-type::after { position: absolute; z-index: -1; top: 100%; content: " "; display: block; width: 100%; height: 200%; background-color: #333; }
 
-#conBox { width: 100%; height: auto; min-height: 100%; padding: 5rem 2rem; box-sizing: border-box; background-color: rgba(46, 39, 157, 0.5); overflow: hidden; }
+#conBox { width: 100%; height: auto; min-height: 100%; padding: 5rem 2rem; box-sizing: border-box; background: linear-gradient(174deg, #dff6f0, #46b3e6, #4d80e4, #2e279d); }
 
 #conBox h2 { display: block; width: 0; height: 0; overflow: hidden; }
+
+#conBox .con_area { width: 100%; height: auto; min-height: 500px; padding: 3rem; box-sizing: border-box; margin: auto; margin-bottom: 2rem; }
+
+#conBox .con_area h3 { width: 20%; min-width: 9.375rem; margin: auto; margin-bottom: 2rem; text-align: center; font-size: 2rem; }
+
+#conBox .web ul { width: 100%; height: auto; }
+
+#conBox .web ul li { width: 100%; height: 500px; margin-bottom: 2rem; }
+
+#conBox .web ul li dl { width: 100%; height: 130%; }
+
+#conBox .web ul li dl:after, #conBox .web ul li dl::after { content: " "; display: block; width: 0; height: 0; clear: both; }
+
+#conBox .web ul li dl dt { float: right; width: 40%; height: 100%; }
+
+#conBox .web ul li dl dd { float: left; width: 60%; height: 100%; position: relative; }
+
+#conBox .web ul li dl dd img { position: absolute; top: 0; right: 0; width: auto; height: 100%; }
+
+#conBox .web ul li dl dd a { display: block; width: 100%; height: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+#conBox .web ul li dl dd a i { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 30px; height: 30px; color: #fff; background-color: #333; border-radius: 100%; text-align: center; line-height: 30px; opacity: 0; transition: all 300ms ease; }
+
+#conBox .web ul li dl dd a.action:after, #conBox .web ul li dl dd a.action::after { content: " "; display: block; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); }
+
+#conBox .web ul li dl dd a.action i { opacity: 1; background-color: #fff; color: #333; }
+
+#conBox .web ul li:nth-of-type(2n) dl dt { float: left; }
+
+#conBox .web ul li:nth-of-type(2n) dl dd { float: right; }
+
+#conBox .web ul li:nth-of-type(2n) dl dd img { left: 0; }
 
 #footBox { width: 100%; height: auto; padding: 2rem; box-sizing: border-box; background-color: #333; color: #fff; text-align: center; }
 

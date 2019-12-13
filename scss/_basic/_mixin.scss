@@ -1,4 +1,9 @@
 // mixin.scss
 @mixin hidden {
    display:block; width: 0; height:0; overflow:hidden;
-}
+};
+
+@mixin clearfix{
+   &:after,
+   &::after {content:" "; display: block; width: 0; height: 0; clear: both;}
+};

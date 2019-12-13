@@ -13,7 +13,7 @@
       let has = $(this).hasClass('action');
       
       if(has){
-         $(this).find('i').attr({'class':'fas fa-plus'});
+         $(this).find('i').attr({'class':'fas fa-anchor'});
          $(this).removeClass('action');
          $(this).next().stop().fadeOut(500,function(){
             $(this).remove();
@@ -30,7 +30,7 @@
 
          subMenu.children('button').on('click',function(){
             headBox.find('.head_menu').removeClass('action');
-            headBox.find('.head_menu').find('i').attr({'class':'fas fa-plus'});
+            headBox.find('.head_menu').find('i').attr({'class':'fas fa-anchor'});
             $(this).parent().stop().fadeOut(500,function(){
                $(this).remove();
             });
