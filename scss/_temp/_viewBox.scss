@@ -1,4 +1,4 @@
-#viewBox {position:relative; width: 100%; height: 100%; min-height: 56.25rem; max-height: 1080px; padding: 5rem 2rem; box-sizing:border-box; background-color: $white; background-repeat: no-repeat; background-position: 50% 50%; overflow:hidden; background-size: 100% auto; background-attachment: fixed; /* background-image:url("../../img/viewBox/viewImg_base.png"); */
+#viewBox {position:relative; width: 100%; min-width: 1000px; height: 100%; min-height: 56.25rem; max-height: 1080px; padding: 5rem 2rem; box-sizing:border-box; background-color: $white; background-repeat: no-repeat; background-position: 50% 50%; overflow:hidden; background-size: 100% auto; background-attachment: fixed; /* background-image:url("../../img/viewBox/viewImg_base.png"); */
    h2 {@include hidden}
    dl {position: absolute; z-index: 500; top: 50%; left: 50%; width: 50%; height: auto; transform:translate(-50%, -50%); text-align:center; color: $white; font-size: $h2; text-transform: capitalize; display: none; /* background-color: rgba($black,0.6); */
       dt {width: 100%; height: auto; text-shadow: 0.2rem 0.2rem 0 $black; font-weight: bold;}

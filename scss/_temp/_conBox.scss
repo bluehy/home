@@ -1,4 +1,4 @@
-#conBox {width: 100%; height: auto; min-height: 100%; padding: 5rem 2rem; box-sizing:border-box; /* background:linear-gradient(174deg, #dff6f0,#46b3e6,#4d80e4,#2e279d,#333); */ background-color: $white; overflow:hidden;
+#conBox {width: 100%; height: auto; min-width: 1280px; min-height: 100%; padding: 5rem 2rem; box-sizing:border-box; /* background:linear-gradient(174deg, #dff6f0,#46b3e6,#4d80e4,#2e279d,#333); */ background-color: $white; overflow:hidden;
    h2 {@include hidden;}
    .con_area {width: 100%; height: auto; min-height: 500px; padding: 3rem; box-sizing:border-box; margin:auto; margin-bottom: 2rem;
       h3 {width: 20%; min-width:9.375rem; margin:auto; margin-bottom: 2rem; text-align:center; font-size:$h4;}

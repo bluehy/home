@@ -36,7 +36,7 @@
 
 #headBox .head_wrap .sub_menu { position: fixed; top: 50%; left: 50%; width: 80%; height: 80%; padding: 2rem; box-sizing: border-box; transform: translate(-50%, -50%); background-color: #fff; display: none; }
 
-#headBox .head_wrap .sub_menu button { display: block; width: 60px; height: 60px; margin: auto; background-color: transparent; font-size: 2rem; color: #464159; }
+#headBox .head_wrap .sub_menu button { display: block; width: 60px; height: 60px; margin: auto; background-color: transparent; font-size: 2.25rem; color: #464159; }
 
 #headBox .head_wrap .sub_menu ul { width: 100%; height: 50%; }
 

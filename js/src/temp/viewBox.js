@@ -61,7 +61,7 @@ let pdfRel = false;
 introBtn.on('click',function(){
    if(pdfRel){
       let download = function(){
-         let url = "../img/logo.png";
+         let url = "../files/portfolio.pdf";
          location.href = url;
       };
       download();
