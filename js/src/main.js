@@ -6,6 +6,8 @@ const wrap = $('#wrap');
 const headBox = wrap.children('#headBox');
 const viewBox = wrap.children('#viewBox');
 const conBox = wrap.children('#conBox');
+   const proBox = conBox.children('.profile');
+   const portBox = conBox.children('.web');
 const footBox = wrap.children('#footBox');
 
 
@@ -27,7 +29,10 @@ const footBox = wrap.children('#footBox');
       body.append(tempS+'viewBox'+tempE);
    });
 
-
+      // conBox
+      proBox.load(htmlUrl+'conBox01.html',function(){
+         body.append(tempS+'conBox01'+tempE);
+      });
 
    footBox.load(htmlUrl+'footBox.html',function(){
       body.append(tempS+'footBox'+tempE);

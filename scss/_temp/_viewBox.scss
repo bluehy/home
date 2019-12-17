@@ -1,9 +1,24 @@
 #viewBox {position:relative; width: 100%; height: 100%; min-height: 56.25rem; max-height: 1080px; padding: 5rem 2rem; box-sizing:border-box; background-color: $white; background-repeat: no-repeat; background-position: 50% 50%; overflow:hidden; background-size: 100% auto; background-attachment: fixed; /* background-image:url("../../img/viewBox/viewImg_base.png"); */
    h2 {@include hidden}
-   p {position: absolute; z-index: 500; top: 50%; left: 50%; width: 50%; height: auto; transform:translate(-50%, -50%); text-align:center; color: $white; font-size: $h2; text-transform: capitalize; text-shadow: 0.2rem 0.2rem 0 $black; font-weight: bold; display: none;}//h2
+   dl {position: absolute; z-index: 500; top: 50%; left: 50%; width: 50%; height: auto; transform:translate(-50%, -50%); text-align:center; color: $white; font-size: $h2; text-transform: capitalize; display: none; /* background-color: rgba($black,0.6); */
+      dt {width: 100%; height: auto; text-shadow: 0.2rem 0.2rem 0 $black; font-weight: bold;}
+      dd {width: 30%; height: auto; margin:auto; font-size:$h5; margin-bottom: 1rem;
+         button {width: 100%; margin:auto; height: 50px; background-color: transparent; border:1px solid $white; color: $white; text-transform: uppercase; box-sizing:border-box;
+            &:hover,&:focus {background-color: $white; color: $black;}
+         }//button
+      &:last-of-type {position: fixed; z-index: 500; left: 50%; bottom: -20rem; transform:translate(-50%); width: 50px; height: 50px; margin-bottom:0;
+         a {display: block; cursor:pointer; width : 100%; height: 100%; background-image: url("../../img/icons/scroll.png"); background-repeat: no-repeat; background-position: 50% 50%; background-size: 80%; animation: scrollMv 1000ms alternate infinite;}//div
+            span {@include hidden;}
+      }//dd:last-of-type
+      }//dd
+   }//dl
+   
 
-   div {position:absolute; top:0; left:0; width: 100%; height: 100%; background-repeat: no-repeat; background-position: 50% 50%; background-size: 100% auto; opacity: 0.9; display:none;
+   >div {position:absolute; top:0; left:0; width: 100%; height: 100%; background-repeat: no-repeat; background-position: 50% 50%; background-size: 100% auto; opacity: 0.8; display:none;
       &:last-of-type {background-position: 50% 100%; display:block; opacity:1;}
       &:last-of-type:after,&:last-of-type::after {position:absolute; z-index:-1; top:100%; content:" "; display: block; width: 100%; height: 200%; background-color: $white;}
    }//div
 }//#viewBox
+
+// 애니메이션
+@keyframes scrollMv {0%{trnasform:translateY(0)} 100%{transform:translateY(20px)}}

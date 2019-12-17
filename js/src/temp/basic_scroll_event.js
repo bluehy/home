@@ -5,6 +5,12 @@ const body = $('body');
 const wrap = $('#wrap');
 const headBox = wrap.children('#headBox');
 const viewBox = wrap.children('#viewBox');
+   const introT = viewBox.children('.intro_title');
+   const introDt = introT.children('dt');
+   const introDd = introT.children('dd');
+   const introBtn = introDd.children('button');
+
+
 const conBox = wrap.children('#conBox');
 const footBox = wrap.children('#footBox');
 
@@ -63,6 +69,7 @@ $(window).on('scroll',function(){
 // headBox 
    // headBox 버튼 클릭 이벤트
    let gnbLi = headBox.find('#gnb').find('li');
+   let conBoxOf = conBox.offset().top;
    let proOf = conBox.children('.profile').offset().top;
    let portOf = conBox.children('.web').offset().top;
    let galOf = conBox.children('.others').offset().top;
@@ -84,5 +91,12 @@ $(window).on('scroll',function(){
          break;
       }
    });
+
+// introDd클릭시 conBox챕으로 이동
+introDd.children('a').on('click',function(e){
+   e.preventDefault();
+   $('html,body').stop().animate({scrollTop:conBoxOf + 'px'},500);
+});
+
 
 })(jQuery);

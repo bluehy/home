@@ -3,6 +3,10 @@
    const win = $(window);
    const wrap = $('#wrap');
    const viewBox = wrap.children('#viewBox');
+      const introT = viewBox.children('.intro_title');
+      const introDt = introT.children('dt');
+      const introDd = introT.children('dd');
+      const introBtn = introDd.children('button');
 
    let par = [];
 
@@ -52,6 +56,10 @@ for(let i = 0; i < par.length; i++){
 
 
 
+// 버튼 클릭시 파일 다운로드
+introBtn.on('click',function(){
+   alert('준비중입니다.');
+});
 
 
 

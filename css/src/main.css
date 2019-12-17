@@ -54,13 +54,30 @@
 
 #viewBox h2 { display: block; width: 0; height: 0; overflow: hidden; }
 
-#viewBox p { position: absolute; z-index: 500; top: 50%; left: 50%; width: 50%; height: auto; transform: translate(-50%, -50%); text-align: center; color: #fff; font-size: 5rem; text-transform: capitalize; text-shadow: 0.2rem 0.2rem 0 #333; font-weight: bold; display: none; }
+#viewBox dl { position: absolute; z-index: 500; top: 50%; left: 50%; width: 50%; height: auto; transform: translate(-50%, -50%); text-align: center; color: #fff; font-size: 8rem; text-transform: capitalize; display: none; /* background-color: rgba($black,0.6); */ }
 
-#viewBox div { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-repeat: no-repeat; background-position: 50% 50%; background-size: 100% auto; opacity: 0.9; display: none; }
+#viewBox dl dt { width: 100%; height: auto; text-shadow: 0.2rem 0.2rem 0 #333; font-weight: bold; }
 
-#viewBox div:last-of-type { background-position: 50% 100%; display: block; opacity: 1; }
+#viewBox dl dd { width: 30%; height: auto; margin: auto; font-size: 1rem; margin-bottom: 1rem; }
 
-#viewBox div:last-of-type:after, #viewBox div:last-of-type::after { position: absolute; z-index: -1; top: 100%; content: " "; display: block; width: 100%; height: 200%; background-color: #fff; }
+#viewBox dl dd button { width: 100%; margin: auto; height: 50px; background-color: transparent; border: 1px solid #fff; color: #fff; text-transform: uppercase; box-sizing: border-box; }
+
+#viewBox dl dd button:hover, #viewBox dl dd button:focus { background-color: #fff; color: #333; }
+
+#viewBox dl dd:last-of-type { position: fixed; z-index: 500; left: 50%; bottom: -20rem; transform: translate(-50%); width: 50px; height: 50px; margin-bottom: 0; }
+
+#viewBox dl dd:last-of-type a { display: block; cursor: pointer; width: 100%; height: 100%; background-image: url("../../img/icons/scroll.png"); background-repeat: no-repeat; background-position: 50% 50%; background-size: 80%; animation: scrollMv 1000ms alternate infinite; }
+
+#viewBox dl dd:last-of-type span { display: block; width: 0; height: 0; overflow: hidden; }
+
+#viewBox > div { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-repeat: no-repeat; background-position: 50% 50%; background-size: 100% auto; opacity: 0.8; display: none; }
+
+#viewBox > div:last-of-type { background-position: 50% 100%; display: block; opacity: 1; }
+
+#viewBox > div:last-of-type:after, #viewBox > div:last-of-type::after { position: absolute; z-index: -1; top: 100%; content: " "; display: block; width: 100%; height: 200%; background-color: #fff; }
+
+@keyframes scrollMv { 0% { trnasform: translateY(0); }
+  100% { transform: translateY(20px); } }
 
 #conBox { width: 100%; height: auto; min-height: 100%; padding: 5rem 2rem; box-sizing: border-box; /* background:linear-gradient(174deg, #dff6f0,#46b3e6,#4d80e4,#2e279d,#333); */ background-color: #fff; overflow: hidden; }
 
