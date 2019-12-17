@@ -6,9 +6,9 @@
    }//address
    sub {line-height: 0.2; word-break:keep-all;}
    
-   .move_top {position:fixed; z-index: 800; bottom: 10%; right: 10%; transform:translate(50%, 50%); width: 60px; height: 60px; color:#fff; display:none;
-      button {width: 100%; height: 100%; background-color: transparent; box-sizing: border-box; border: 1px solid #fff; transition:all 500ms ease;
-         p {display: block; width: 100%; height: 100%; text-align:center; font-size: 16px; line-height: 60px; text-transform: uppercase;
+   .move_top {position:fixed; z-index: 800; bottom: 10%; right: 10%; transform:translate(50%, 50%); width: 60px; height: 60px; color:$mainF; display:none;
+      button {width: 100%; height: 100%; background-color: transparent; box-sizing: border-box; border: 1px solid $mainF; transition:all 500ms ease;
+         p {display: block; width: 100%; height: 100%; text-align:center; font-size: 16px; line-height: 60px; text-transform: uppercase; color: $mainF;
             span {@include hidden;}
          }
          i {color: #464159; font-size: 32px; display:none;}

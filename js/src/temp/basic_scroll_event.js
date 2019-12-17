@@ -20,11 +20,13 @@ $(window).on('scroll',function(){
       headBox.find('#gnb').slideUp(500,function(){
          headBox.find('.head_menu').stop().slideDown();
       });
+      headBox.stop().animate({backgroundColor:'transparent'});
       footBox.find('.move_top').stop().fadeIn();
    }else{
       headBox.find('.head_menu').stop().slideUp(500,function(){
          headBox.find('#gnb').stop().slideDown();
       });
+      headBox.stop().animate({backgroundColor:'#fff'});
       footBox.find('.move_top').stop().fadeOut();
    }
 
@@ -58,5 +60,29 @@ $(window).on('scroll',function(){
 });
 
 
+// headBox 
+   // headBox 버튼 클릭 이벤트
+   let gnbLi = headBox.find('#gnb').find('li');
+   let proOf = conBox.children('.profile').offset().top;
+   let portOf = conBox.children('.web').offset().top;
+   let galOf = conBox.children('.others').offset().top;
+   // console.log(conBoxOf);
+
+   gnbLi.children('a').on('click',function(e){
+      e.preventDefault();
+      let myI = $(this).parent().index();
+      console.log(myI);
+      switch (myI){
+         case 0 : 
+            $('html, body').stop().animate({scrollTop : proOf + 'px'},500);
+            break;
+         case 1 :
+            $('html, body').stop().animate({scrollTop : portOf + 'px'},500);
+         break;
+         case 2 :
+            $('html, body').stop().animate({scrollTop : galOf + 'px'},500);
+         break;
+      }
+   });
 
 })(jQuery);

@@ -12,15 +12,16 @@
 
 
 
-#viewBox {position:relative; width: 100%; height: 100%; min-height: 56.25rem; padding: 5rem 2rem; box-sizing:border-box; background-color: rgba(0,0,0,0.5); background-repeat: no-repeat; background-position: 50% 0; overflow:hidden;
-   h2 {@include hidden;}
-   div {position:absolute; top:0; left:0; width: 100%; height: 100%; background-repeat: no-repeat; background-position: 50% 100%; background-size: 100% auto;}
-   div:last-of-type:after,div:last-of-type::after {position:absolute; z-index:-1; top:100%; content:" "; display: block; width: 100%; height: 200%; background-color: #333;}
+#viewBox {position:relative; width: 100%; height: 100%; min-height: 56.25rem; max-height: 1080px; padding: 5rem 2rem; box-sizing:border-box; background-color: $white; background-repeat: no-repeat; background-position: 50% 50%; overflow:hidden; background-size: 100% auto; background-attachment: fixed; /* background-image:url("../../img/viewBox/viewImg_base.png"); */
+   h2 {position: absolute; z-index: 500; top: 50%; left: 50%; width: 50%; height: auto; transform:translate(-50%, -50%); text-align:center; color: $white; font-size: $h2; text-transform: capitalize; text-shadow: 0.2rem 0.2rem 0 $black; display: none;}
+   div {position:absolute; top:0; left:0; width: 100%; height: 100%; background-repeat: no-repeat; background-position: 50% 50%; background-size: 100% auto; opacity: 0.9; display:none;}
+   div:last-of-type {background-position: 50% 100%; display:block; opacity:1;}
+   div:last-of-type:after,div:last-of-type::after {position:absolute; z-index:-1; top:100%; content:" "; display: block; width: 100%; height: 200%; background-color: $white;}
 }//#viewBox
 
 
 
-#conBox {width: 100%; height: auto; min-height: 100%; padding: 5rem 2rem; box-sizing:border-box; background:linear-gradient(174deg, #dff6f0,#46b3e6,#4d80e4,#2e279d,#333); overflow:hidden;
+#conBox {width: 100%; height: auto; min-height: 100%; padding: 5rem 2rem; box-sizing:border-box; /* background:linear-gradient(174deg, #dff6f0,#46b3e6,#4d80e4,#2e279d,#333); */ background-color: $white; overflow:hidden;
    h2 {@include hidden;}
    .con_area {width: 100%; height: auto; min-height: 500px; padding: 3rem; box-sizing:border-box; margin:auto; margin-bottom: 2rem;
       h3 {width: 20%; min-width:9.375rem; margin:auto; margin-bottom: 2rem; text-align:center; font-size:$h4;}
@@ -34,7 +35,7 @@
                .img_area{float:left; width: 60%; height: 100%; position:relative;
                   img {position:absolute; top:0; right: 0; width: auto; height: 100%;}
                }//dd.img_area
-               .text_area {position:absolute; top: 55%; left: 50%; width: 40%; height: 20%; background-color: #fff;}
+               .text_area {position:absolute; top: 55%; left: 50%; width: 40%; height: 20%; background-color: $main;}
             }//dl
          }//li
          li:nth-of-type(2n) {
