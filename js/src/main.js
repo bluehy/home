@@ -34,6 +34,10 @@ const footBox = wrap.children('#footBox');
          body.append(tempS+'conBox01'+tempE);
       });
 
+      portBox.load(htmlUrl+'conBox02.html',function(){
+         body.append(tempS+'conBox02'+tempE);
+      })
+
    footBox.load(htmlUrl+'footBox.html',function(){
       body.append(tempS+'footBox'+tempE);
       body.append(tempS+'basic_scroll_event'+tempE);

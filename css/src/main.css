@@ -66,7 +66,7 @@
 
 #viewBox dl dd:last-of-type { position: fixed; z-index: 500; left: 50%; bottom: -15rem; transform: translate(-50%); width: 50px; height: 50px; margin-bottom: 0; }
 
-#viewBox dl dd:last-of-type a { display: block; cursor: pointer; width: 100%; height: 100%; background-image: url("../../img/icons/scroll.png"); background-repeat: no-repeat; background-position: 50% 50%; background-size: 80%; animation: scrollMv 1000ms alternate infinite; }
+#viewBox dl dd:last-of-type a { display: block; width: 100%; height: 100%; background-image: url("../../img/icons/scroll.png"); background-repeat: no-repeat; background-position: 50% 50%; background-size: 80%; animation: scrollMv 1000ms alternate infinite; }
 
 #viewBox dl dd:last-of-type span { display: block; width: 0; height: 0; overflow: hidden; }
 
@@ -87,33 +87,45 @@
 
 #conBox .con_area h3 { width: 20%; min-width: 9.375rem; margin: auto; margin-bottom: 2rem; text-align: center; font-size: 2rem; }
 
-#conBox .web ul { width: 100%; min-width: 1000px; height: auto; }
+#conBox .web .port_category { width: 50%; min-width: 500px; height: auto; margin: auto; margin-bottom: 2rem; }
 
-#conBox .web ul li { width: 100%; height: 650px; margin-bottom: 2rem; position: relative; }
+#conBox .web .port_category:after, #conBox .web .port_category::after { content: " "; display: block; width: 0; height: 0; clear: both; }
 
-#conBox .web ul li dl { width: 100%; height: 100%; }
+#conBox .web .port_category li { float: left; width: 30%; height: auto; margin-right: 5%; }
 
-#conBox .web ul li dl:after, #conBox .web ul li dl::after { content: " "; display: block; width: 0; height: 0; clear: both; }
+#conBox .web .port_category li:last-of-type { margin-right: 0; }
 
-#conBox .web ul li dl dt { float: right; width: 40%; height: 100%; }
+#conBox .web .port_category li a { display: block; width: 100%; height: 100%; text-align: center; font-size: 1rem; border-radius: 10px; border: 1px solid #9be3de; box-sizing: border-box; transition: all 300ms ease; }
 
-#conBox .web ul li dl .img_area { float: left; width: 60%; height: 100%; position: relative; }
+#conBox .web .port_category li a.action { background-color: #9be3de; color: #fff; }
 
-#conBox .web ul li dl .img_area img { position: absolute; top: 0; right: 0; width: auto; height: 100%; }
+#conBox .web .port_list { width: 100%; min-width: 1000px; height: auto; }
 
-#conBox .web ul li dl .text_area { position: absolute; top: 55%; left: 50%; width: 40%; height: auto; padding: 1rem 2rem; box-sizing: border-box; background-color: #9be3de; }
+#conBox .web .port_list li { width: 100%; height: 650px; margin-bottom: 2rem; position: relative; }
 
-#conBox .web ul li dl .text_area p { float: left; width: 100%; height: 100px; }
+#conBox .web .port_list li dl { width: 100%; height: 100%; }
 
-#conBox .web ul li dl .text_area a { display: block; float: right; width: 30%; height: 50px; box-sizing: border-box; border: 1px solid #fff; color: #fff; line-height: 50px; text-align: center; }
+#conBox .web .port_list li dl:after, #conBox .web .port_list li dl::after { content: " "; display: block; width: 0; height: 0; clear: both; }
 
-#conBox .web ul li:nth-of-type(2n) dl dt { float: left; }
+#conBox .web .port_list li dl dt { float: right; width: 40%; height: 50%; }
 
-#conBox .web ul li:nth-of-type(2n) dl .img_area { float: right; }
+#conBox .web .port_list li dl .img_area { float: left; width: 60%; height: 100%; position: relative; }
 
-#conBox .web ul li:nth-of-type(2n) dl .img_area img { left: 0; }
+#conBox .web .port_list li dl .img_area img { position: absolute; top: 0; right: 0; width: auto; height: 100%; }
 
-#conBox .web ul li:nth-of-type(2n) dl .text_area { left: auto; right: 50%; }
+#conBox .web .port_list li dl .text_area { position: absolute; top: 55%; left: 50%; width: 40%; height: auto; padding: 1rem 2rem; box-sizing: border-box; background-color: #9be3de; }
+
+#conBox .web .port_list li dl .text_area p { float: left; width: 100%; height: 100px; }
+
+#conBox .web .port_list li dl .text_area a { display: block; float: right; width: 30%; height: 50px; box-sizing: border-box; border: 1px solid #fff; color: #fff; line-height: 50px; text-align: center; }
+
+#conBox .web .port_list li:nth-of-type(2n) dl dt { float: left; }
+
+#conBox .web .port_list li:nth-of-type(2n) dl .img_area { float: right; }
+
+#conBox .web .port_list li:nth-of-type(2n) dl .img_area img { left: 0; }
+
+#conBox .web .port_list li:nth-of-type(2n) dl .text_area { left: auto; right: 50%; }
 
 #footBox { width: 100%; height: auto; padding: 2rem; box-sizing: border-box; background-color: #333; color: #fff; text-align: center; }
 
