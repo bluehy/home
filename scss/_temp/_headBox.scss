@@ -1,8 +1,8 @@
 #headBox {position:fixed; z-index:1000; top:0; left:0; width: 100%; height: 40px; box-sizing:border-box; background-color: #fff;
    .head_wrap {width: 90%; min-width: 960px; max-width: 1280px; height: 100%; margin:auto;
       h1 {float:left; width: 20%; height: 100%;
-         a {display: block; width: 100%; height: 100%; background-image: url("../../img/favicon.png"); background-position: 50% 50%; background-repeat: no-repeat; background-size: 10%;}
-         span {@include hidden}
+         a {display: block; width: 100%; height: 100%; background-image: url("../../img/logo.png"); background-position: 50% 50%; background-repeat: no-repeat; background-size: 100%;}
+         span {@include hidden;}
       }//h1
       #gnb {float:right; width: 60%; height: 100%;
          h2 {@include hidden;}

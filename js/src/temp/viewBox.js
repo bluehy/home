@@ -31,17 +31,17 @@
       for(let i = 0; i < par.length; i++){
          $(par[i]).css({top: -scroll / (i + 1)});
          if(scroll <= 50){
-            viewBox.children('h2').stop().animate({opacity: 1});
+            viewBox.children('.intro_title').stop().animate({opacity: 1});
          }else{
-            viewBox.children('h2').stop().animate({opacity: parseInt(scroll / 1000) });
+            viewBox.children('.intro_title').stop().animate({opacity: parseInt(scroll / 1000) });
          }
       }
    });
 
 
-// h2 등장
+// .intro_title 등장
 window.setTimeout(function(){
-   viewBox.children('h2').stop().fadeIn(1000);
+   viewBox.children('.intro_title').stop().fadeIn(1000);
 },2000);
 
 
