@@ -1,0 +1,27 @@
+#conBox{   
+   .web {
+      ul {width: 100%; min-width: 1000px; height: auto;
+         li {width: 100%; height: 650px; margin-bottom: 2rem; position:relative;
+            dl{width: 100%; height: 100%; @include clearfix;
+               dt{float:right; width: 40%; height:50%; }//dt
+               .img_area{float:left; width: 60%; height: 100%; position:relative;
+                  img {position:absolute; top:0; right: 0; width: auto; height: 100%;}
+               }//dd.img_area
+               .text_area {position:absolute; top: 55%; left: 50%; width: 40%; height: auto; padding:1rem 2rem; box-sizing: border-box; background-color: $main;
+                  p {float:left; width: 100%; height: 100px;}
+                  a {display: block; float:right; width: 30%; height: 50px; box-sizing:border-box; border:1px solid $white; color: $white; line-height: 50px; text-align:center;}
+               }//dd
+            }//dl
+         }//li
+         li:nth-of-type(2n) {
+            dl {
+               dt {float:left;}
+               .img_area {float:right;
+                  img {left:0;}
+               }//dd.img_area
+               .text_area {left:auto; right: 50%;}
+            }//dl
+         }// li:nth-of-type(2n)
+      }//ul
+   }//.web
+}

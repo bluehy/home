@@ -57,8 +57,17 @@ for(let i = 0; i < par.length; i++){
 
 
 // 버튼 클릭시 파일 다운로드
+let pdfRel = false;
 introBtn.on('click',function(){
-   alert('준비중입니다.');
+   if(pdfRel){
+      let download = function(){
+         let url = "../img/logo.png";
+         location.href = url;
+      };
+      download();
+   }else{
+      alert('준비중입니다.');
+   }
 });
 
 
