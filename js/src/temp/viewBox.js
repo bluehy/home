@@ -37,7 +37,7 @@
          if(scroll <= 50){
             viewBox.children('.intro_title').stop().animate({opacity: 1});
          }else{
-            viewBox.children('.intro_title').stop().animate({opacity: parseInt(scroll / 1000) });
+            viewBox.children('.intro_title').stop().animate({opacity: parseInt(scroll / 1000)});
          }
       }
    });
@@ -70,6 +70,52 @@ introBtn.on('click',function(){
    }
 });
 
+
+//typing effect
+// text 추가
+let typingBool = false;
+let typingIdx = 0;
+let typingText = introDd.eq(0).children('.typing_text').text();
+typingText = typingText.split("");
+console.log(typingText);
+introDd.eq(0).children('.typing_text').empty();
+
+let tyInt;
+const Typing = function(){
+   tyInt = setInterval(function(){
+      if(typingIdx <= typingText.length){
+         typingBool = true;
+         introDd.eq(0).children('.typing_text').show();
+         introDd.eq(0).children('.typing_text').append(typingText[typingIdx]);
+         typingIdx++;
+      }else{
+         typingBool = false;
+      }
+   },300)
+}
+
+const TypingStop = function(){
+   clearInterval(tyInt);
+}
+
+if(typingBool == false){
+   setTimeout(function(){
+      Typing();
+   },2000)
+}else{
+   TypingStop();
+}
+
+// cursor 깜빡이기
+const IntroTyping = function(){
+   setInterval(function(){
+      introDd.eq(0).children('span').eq(-1).css({opacity:0});
+      setTimeout(function(){
+         introDd.eq(0).children('span').eq(-1).css({opacity:1});
+      },500)
+   },1000);
+}//IntroTyping()
+IntroTyping();
 
 
 })(jQuery);

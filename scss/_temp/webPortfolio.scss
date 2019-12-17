@@ -5,7 +5,7 @@
          li {float:left; width: 30%; height: auto; margin-right:5%;
          &:last-of-type {margin-right: 0;}
             a {display: block; width: 100%; height: 100%; text-align:center; font-size:$h6; border-radius:10px; border: 1px solid $main; box-sizing:border-box; transition:all 300ms ease;
-            &.action {background-color: $main; color:$white;}
+            &.action {background-color: $main; color:$mainF;}
          }//a
          }//li
       }//.port_category
