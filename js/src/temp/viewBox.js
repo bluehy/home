@@ -6,7 +6,7 @@
       const introT = viewBox.children('.intro_title');
       const introDt = introT.children('dt');
       const introDd = introT.children('dd');
-      const introBtn = introDd.children('button');
+      const introBtn = introDd.children('a');
 
    let par = [];
 

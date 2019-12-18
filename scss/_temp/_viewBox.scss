@@ -2,13 +2,13 @@
    h2 {@include hidden}
    dl {position: absolute; z-index: 500; top: 50%; left: 50%; width: 50%; height: auto; transform:translate(-50%, -50%); text-align:center; color: $white; font-size: $h2; text-transform: capitalize; display: none; /* background-color: rgba($black,0.6); */
       dt {width: 100%; height: auto; text-shadow: 0.2rem 0.2rem 0 $black; font-weight: bold;}
-      dd {width: 30%; min-width: 200px; height: auto; margin:auto; font-size:$h5; margin-bottom: 1rem;
+      dd {width: 50%; min-width: 250px; height: auto; margin:auto; font-size:$h5; margin-bottom: 1rem;
       &:first-of-type {@include clearfix;}
          span {width:auto; height: auto;
-         &.typing_text {display:none;}
+         &.typing_text {display:none; text-shadow:0.2rem 0.2rem 0.1rem $black;}
          &:last-of-type {width: 10%; text-align:left;}
          }//span
-         button {width: 100%; margin:auto; height: 50px; background-color: transparent; border:1px solid $white; color: $white; text-transform: uppercase; box-sizing:border-box; transition:all 300ms ease;
+         .pdfDown {display: block; width: 80%; margin:auto; height: 50px; background-color: rgba(0,0,0,0.1); border:1px solid $white; color: $white; text-transform: uppercase; box-sizing:border-box; transition:all 300ms ease; line-height: 45px; box-shadow: 0.2rem 0.2rem 0.2rem $black;
             &:hover,&:focus {background-color: $white; color: $black;}
          }//button
       &:last-of-type {position: fixed; z-index: 500; left: 50%; bottom: -15rem; transform:translate(-50%); width: 50px; min-width: 50px; height: 50px; margin-bottom:0;
