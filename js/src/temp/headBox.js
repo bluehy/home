@@ -16,7 +16,7 @@
       if(has){
          $(this).find('i').attr({'class':'fas fa-anchor'});
          $(this).removeClass('action');
-         subMenu.stop().slideUp(function(){
+         subMenu.stop().slideUp(500,function(){
             $(this).remove();
          });
       }else{
