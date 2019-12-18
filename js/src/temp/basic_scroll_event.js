@@ -4,6 +4,10 @@ const head = $('head');
 const body = $('body');
 const wrap = $('#wrap');
 const headBox = wrap.children('#headBox');
+   
+         
+
+
 const viewBox = wrap.children('#viewBox');
    const introT = viewBox.children('.intro_title');
    const introDt = introT.children('dt');
@@ -34,6 +38,13 @@ $(window).on('scroll',function(){
       });
       headBox.stop().animate({backgroundColor:'#fff'});
       footBox.find('.move_top').stop().fadeOut();
+      // subMenu가 열려있을 경우에, 함께 사라지게끔(초기화)
+      let subMenu = headBox.find('.sub_menu');
+      headBox.find('.head_menu').removeClass('action');
+      headBox.find('.head_menu').find('i').attr({'class':'fas fa-anchor'});
+      subMenu.stop().fadeOut(500,function(){
+         $(this).remove();
+      })
    }
 
 
