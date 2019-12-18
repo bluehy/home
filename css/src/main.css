@@ -129,11 +129,11 @@
 
 #conBox .web .port_list li dl .text_area p { float: left; width: 100%; height: 100px; }
 
-#conBox .web .port_list li dl .text_area a { display: block; float: right; width: 30%; height: 50px; margin-left: 1rem; box-sizing: border-box; border: 1px solid #fff; color: #fff; line-height: 50px; text-align: center; position: relative; z-index: 100; }
+#conBox .web .port_list li dl .text_area a { display: block; float: right; width: 30%; height: 40px; margin-left: 1rem; box-sizing: border-box; border: 1px solid #464159; color: #464159; line-height: 40px; text-align: center; position: relative; z-index: 100; text-transform: uppercase; transition: all 500ms ease; font-size: 0.75rem; }
 
-#conBox .web .port_list li dl .text_area a:hover, #conBox .web .port_list li dl .text_area a:focus { color: #464159; }
+#conBox .web .port_list li dl .text_area a:hover, #conBox .web .port_list li dl .text_area a:focus { color: #9be3de; }
 
-#conBox .web .port_list li dl .text_area a:after, #conBox .web .port_list li dl .text_area a::after { content: " "; display: block; position: absolute; z-index: -1; top: 0; left: 0; width: 0; height: 100%; background: linear-gradient(78deg, #9be3de, #464159); transition: width 500ms ease; }
+#conBox .web .port_list li dl .text_area a:after, #conBox .web .port_list li dl .text_area a::after { content: " "; display: block; position: absolute; z-index: -1; top: 0; left: 0; width: 0; height: 100%; background-color: #464159; transition: all 500ms ease; }
 
 #conBox .web .port_list li dl .text_area a.action:after, #conBox .web .port_list li dl .text_area a.action::after { width: 100%; }
 

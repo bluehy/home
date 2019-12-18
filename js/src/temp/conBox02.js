@@ -9,6 +9,12 @@
       
       const portList = portBox.children('.port_list');
       const portListLi = portList.children('li');
+         const portDl = portListLi.children('dl');
+         const portDt = portDl.children('dt');
+         const portDd = portDl.children('dd');
+            const portLink = portDd.children('a');
+            const portDemo = portDd.children('a').eq(0);
+            const portDetail = portDd.children('a').eq(1);
       
 
 // function
@@ -36,5 +42,13 @@ portConLink.on('click',function(e){
    }
 })
 
+// portLink버튼 mouseenter,focus 이벤트(클래스 추가)
+portLink.on('mouseenter focus',function(){
+   $(this).addClass('action');
+   $(this).siblings('a').removeClass('action');
+})
 
+portLink.on('mouseleave blur',function(){
+   $(this).removeClass('action');
+})
 })(jQuery);

@@ -6,7 +6,7 @@
       const introT = viewBox.children('.intro_title');
       const introDt = introT.children('dt');
       const introDd = introT.children('dd');
-      const introBtn = introDd.children('a');
+      const introBtn = introDd.eq(1).children('a');
 
    let par = [];
 
@@ -58,14 +58,9 @@ for(let i = 0; i < par.length; i++){
 
 // 버튼 클릭시 파일 다운로드
 let pdfRel = false;
-introBtn.on('click',function(){
-   if(pdfRel){
-      let download = function(){
-         let url = "../files/portfolio.pdf";
-         location.href = url;
-      };
-      download();
-   }else{
+introBtn.on('click',function(e){
+   if(!pdfRel){
+      e.preventDefault();
       alert('준비중입니다.');
    }
 });

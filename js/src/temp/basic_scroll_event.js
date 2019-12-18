@@ -92,8 +92,8 @@ $(window).on('scroll',function(){
       }
    });
 
-// introDd클릭시 conBox챕으로 이동
-introDd.children('a').on('click',function(e){
+// introDd(스크롤버튼)클릭시 conBox챕으로 이동
+introDd.eq(-1).children('a').on('click',function(e){
    e.preventDefault();
    $('html,body').stop().animate({scrollTop:conBoxOf + 'px'},500);
 });
